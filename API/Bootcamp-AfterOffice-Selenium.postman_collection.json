@@ -1,0 +1,232 @@
+{
+	"info": {
+		"_postman_id": "8bcbf5a5-3bed-4ef5-8c67-4c4845af9f8b",
+		"name": "Bootcamp-AfterOffice-Selenium",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "30398445"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJ0eXAqiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvbGFwb3IuZm9sa2F0ZWNoLmNvbVwvYXBpXC9sb2dpbiIsImlhdCI6MTc0MTc0MzE3MiwiZXhwIjoxNzQxNzQ2NzcyLCJuYmYiOjE3NDE3NDMxNzIsImp0aSI6IjVod0RIalRCdnczZzlOVFciLCJzdWIiOjYsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.HHFgemQfi6TYHWpB2BEKEhtlqIjHveX8SuJRW1GL9OM"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"email\": \"dirwandeui@gmail.com\",\r\n\"full_name\": \"dirwan tea\",\r\n\"password\": \"Bintaro1!\",\r\n\"department\": \"Technology\",\r\n\"phone_number\": \"085590932219\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{Base_Url}}/api/register"
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJ0eXAqiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvbGFwb3IuZm9sa2F0ZWNoLmNvbVwvYXBpXC9sb2dpbiIsImlhdCI6MTc0MTc0MzE3MiwiZXhwIjoxNzQxNzQ2NzcyLCJuYmYiOjE3NDE3NDMxNzIsImp0aSI6IjVod0RIalRCdnczZzlOVFciLCJzdWIiOjYsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.HHFgemQfi6TYHWpB2BEKEhtlqIjHveX8SuJRW1GL9OM"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"email\": \"dirwantea@gmail.com\",\r\n\"password\": \"Bintaro1!\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{Base_Url}}/api/login"
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllObject",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgxIiwiaWF0IjoxNzQ3NTc4ODUyfQ.c-SSProBdCJRp25VMUPIiJ01iLaEyk6pwDzvNnG-UWA"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "{{Base_Url}}/api/objects"
+			},
+			"response": []
+		},
+		{
+			"name": "ListOfObjectsByIds",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgxIiwiaWF0IjoxNzQ3NjQ0NjQ4fQ.-JpCF5P9iazx0YOJkdmbAJZGGyQWvFeRQbUMjXPcB3A"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Base_Url}}/api/objectslistId?id=101",
+					"host": [
+						"{{Base_Url}}"
+					],
+					"path": [
+						"api",
+						"objectslistId"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "101"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SingleObject",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgxIiwiaWF0IjoxNzQ3NjQ0NjQ4fQ.-JpCF5P9iazx0YOJkdmbAJZGGyQWvFeRQbUMjXPcB3A"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "{{Base_Url}}/8749129e-f5f7-4ae6-9b03-93be7252443c/api/objects/101"
+			},
+			"response": []
+		},
+		{
+			"name": "Add Objects",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgxIiwiaWF0IjoxNzQ3NTc5ODY1fQ.KNbYi8txsfccOlORC0bBo9gBZp81C8dpqmajrYjNEEw"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Laptop Uhuy hapus\",\r\n    \"data\": {\r\n        \"year\": 2025,\r\n        \"price\": 2549.99,\r\n        \"cpu_model\": \"Intel Core i9\",\r\n        \"hard_disk_size\": \"1 TB\",\r\n        \"capacity\": \"2 cpu\",\r\n        \"screen_size\": \"16 Inch\",\r\n        \"color\": \"Black\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{Base_Url}}/api/objects"
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateObject",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgxIiwiaWF0IjoxNzQ3NTgwMjAxfQ.nElHWDYsUGjVeJ0V-ZhilP1HCJ43lx88wnbBJdZMuQk"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Laptop Uhuyan\",\r\n    \"data\": {\r\n            \"year\": \"2025\",\r\n            \"price\": 2549.99,\r\n            \"cpu_model\": \"IntelCorei9\",\r\n            \"hard_disk_size\": \"1 TB\",\r\n            \"color\": \"Black\",\r\n            \"capacity\": \"2 cpu\",\r\n            \"screen_size\": \"16 Inch\"\r\n        }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{Base_Url}}/37777abe-a5ef-4570-a383-c99b5f5f7906/api/objects/175"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Objects",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgxIiwiaWF0IjoxNzQ3NjY0MTUxfQ.viRTH3L1qDwJmK2PB726CZDgIDxX1nh1hIxCfWxXfmU"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": "{{Base_Url}}/d79a30ed-1066-48b6-83f5-556120afc46f/api/objects/187"
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllDepartment",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgxIiwiaWF0IjoxNzQ3NTc1MjAzfQ.JzYEaEkuwrq8QxlHVFPtSsrg8823fNv6X2fWP1xCIZo"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{Base_Url}}/api/department"
+			},
+			"response": []
+		},
+		{
+			"name": "PartiallyUpdateObject",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgxIiwiaWF0IjoxNzQ3NjY0ODcxfQ.hP05wzpryutlghKOTWXfclEvS3NiaUPMlZqFjS4SpGc"
+					}
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"name\": \"Apple MacBook Pro 1611-albert12\",\r\n\"year\": \"2030\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{Base_Url}}/39a0f904-b0f2-4428-80a3-391cea5d7d04/api/object/12"
+			},
+			"response": []
+		}
+	]
+}
