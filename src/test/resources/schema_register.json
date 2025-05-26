@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^\\d+$"
+    },
+    "email": {
+      "type": "string",
+      "format": "email"
+    },
+    "full_name": {
+      "type": "string",
+      "minLength": 2,
+      "maxLength": 100
+    },
+    "department": {
+      "type": "string",
+      "enum": ["Technology", "HR", "Finance", "Marketing"]
+    },
+    "phone_number": {
+      "type": "string",
+      "pattern": "^\\d{10,15}$"
+    },
+    "create_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "update_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "id",
+    "email",
+    "full_name",
+    "department",
+    "phone_number",
+    "create_at",
+    "update_at"
+  ],
+  "additionalProperties": false
+}

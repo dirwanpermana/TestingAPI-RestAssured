@@ -1,0 +1,11 @@
+com\seleniumproject\model\RequestLogin.class
+com\seleniumproject\model\modelTugas_e2e\resLogin.class
+com\seleniumproject\model\responseRegister.class
+com\seleniumproject\model\ResponseProvinsi$Province.class
+com\seleniumproject\model\ResponseProvinsi.class
+com\seleniumproject\Main.class
+com\seleniumproject\model\RequestRegister.class
+com\seleniumproject\model\modelTugas_e2e\listObjectDetail.class
+com\seleniumproject\model\modelTugas_e2e\reqRegist.class
+com\seleniumproject\model\modelTugas_e2e\listObjectDetail$Data.class
+com\seleniumproject\model\modelTugas_e2e\reqLogin.class

@@ -1,0 +1,46 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ProductSchema",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "data": {
+      "type": "object",
+      "properties": {
+        "year": {
+          "type": "integer"
+        },
+        "price": {
+          "type": "number"
+        },
+        "cpu_model": {
+          "type": "string"
+        },
+        "hard_disk_size": {
+          "type": "string"
+        },
+        "capacity": {
+          "type": "string"
+        },
+        "screen_size": {
+          "type": "string"
+        },
+        "color": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "year",
+        "price",
+        "cpu_model",
+        "hard_disk_size",
+        "capacity",
+        "screen_size",
+        "color"
+      ]
+    }
+  },
+  "required": ["name", "data"]
+}

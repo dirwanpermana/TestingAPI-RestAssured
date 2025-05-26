@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="2" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-05-26T14:33:53 WIB" name="Cucumber_suite" finished-at="2025-05-26T14:34:00 WIB" duration-ms="6565">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumber.runners.TestRunner@763ff91]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test started-at="2025-05-26T14:33:53 WIB" name="Cucumber" finished-at="2025-05-26T14:34:00 WIB" duration-ms="6565">
+      <class name="cucumber.runners.TestRunner">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:cucumber.runners.TestRunner@763ff91]" started-at="2025-05-26T14:33:53 WIB" name="setUpClass" finished-at="2025-05-26T14:33:54 WIB" duration-ms="497" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@6ad259d]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumber.runners.TestRunner@763ff91]" started-at="2025-05-26T14:33:54 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-05-26T14:33:58 WIB" duration-ms="4385" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Successfully add a new object via generic POST step"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Add new object to the system"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[1 expectation failed.
+Response body doesn't match expectation.
+Expected: The content to match the given JSON schema.
+error: instance type (array) does not match any allowed primitive type (allowed: ["object"])
+    level: "error"
+    schema: {"loadingURI":"file:/D:/BelajarSelenium/Bootcamp%20Selenium%20After%20Office/seleniumproject/target/test-classes/schema_addObject.json#","pointer":""}
+    instance: {"pointer":""}
+    domain: "validation"
+    keyword: "type"
+    found: "array"
+    expected: ["object"]
+
+  Actual: [{"id":838,"name":"PC Gaming","data":{"year":"2025","price":2549.99,"cpu_model":"Intel Core i9","hard_disk_size":"1 TB","color":"Black","capacity":"2 cpu","screen_size":"16 Inch"}}]
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: 1 expectation failed.
+Response body doesn't match expectation.
+Expected: The content to match the given JSON schema.
+error: instance type (array) does not match any allowed primitive type (allowed: ["object"])
+    level: "error"
+    schema: {"loadingURI":"file:/D:/BelajarSelenium/Bootcamp%20Selenium%20After%20Office/seleniumproject/target/test-classes/schema_addObject.json#","pointer":""}
+    instance: {"pointer":""}
+    domain: "validation"
+    keyword: "type"
+    found: "array"
+    expected: ["object"]
+
+  Actual: [{"id":838,"name":"PC Gaming","data":{"year":"2025","price":2549.99,"cpu_model":"Intel Core i9","hard_disk_size":"1 TB","color":"Black","capacity":"2 cpu","screen_size":"16 Inch"}}]
+
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:57)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:107)
+at io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:238)
+at cucumber.definitions.addUser.validateJsonSchema(addUser.java:46)
+at ✽.The response schema should be match with schema "schema_addObject.json"(file:///D:/BelajarSelenium/Bootcamp%20Selenium%20After%20Office/seleniumproject/src/test/resources/features/addObject.feature:32)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumber.runners.TestRunner@763ff91]" started-at="2025-05-26T14:33:58 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-05-26T14:33:59 WIB" duration-ms="915" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Register a new user"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Employee API"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumber.runners.TestRunner@763ff91]" started-at="2025-05-26T14:33:59 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-05-26T14:34:00 WIB" duration-ms="686" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Login user and save token"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Employee API"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:cucumber.runners.TestRunner@763ff91]" started-at="2025-05-26T14:34:00 WIB" name="tearDownClass" finished-at="2025-05-26T14:34:00 WIB" duration-ms="41" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:cucumber.runners.TestRunner@763ff91]" started-at="2025-05-26T14:34:00 WIB" name="afterSuite" finished-at="2025-05-26T14:34:01 WIB" duration-ms="639" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- cucumber.runners.TestRunner -->
+    </test> <!-- Cucumber -->
+  </suite> <!-- Cucumber_suite -->
+</testng-results>

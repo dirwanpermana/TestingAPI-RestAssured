@@ -28,6 +28,13 @@
             <version>5.5.1</version>
             <scope>test</scope>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.38</version>
+            <scope>provided</scope>
+        </dependency>
         <!-- jackson untuk untuk serialisasi dan deserialisasi -->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
@@ -41,6 +48,58 @@
             <version>5.4.0</version>
             <scope>test</scope>
         </dependency>
+<!-- cucumber -->
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-java</artifactId>
+            <version>7.22.2</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-testng</artifactId>
+            <version>7.22.2</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>net.masterthought</groupId>
+            <artifactId>cucumber-reporting</artifactId>
+            <version>5.7.0</version>
+        </dependency>
+        <!-- <dependency>
+        <groupId>io.cucumber</groupId>
+        <artifactId>cucumber-junit-platform-engine</artifactId>
+        <version>7.22.2</version>
+        </dependency> -->
+
+    <!-- JUnit 5
+    <dependency>
+        <groupId>org.junit.platform</groupId>
+        <artifactId>junit-platform-suite-api</artifactId>
+        <version>1.10.0</version>
+    </dependency> -->
+
+   <dependency>
+    <groupId>org.testng</groupId>
+    <artifactId>testng</artifactId>
+    <version>7.8.0</version>
+    <scope>test</scope>
+    </dependency>
+
+    <dependency>
+    <groupId>org.slf4j</groupId>
+    <artifactId>slf4j-simple</artifactId>
+    <version>2.0.9</version>
+    <scope>test</scope>
+    </dependency>
+
+    <!-- JSON Path matcher -->
+    <dependency>
+        <groupId>io.rest-assured</groupId>
+        <artifactId>json-path</artifactId>
+        <version>5.4.0</version>
+    </dependency>
+
     </dependencies>
     <build>
         <!-- To define the plugin version in your parent POM -->
@@ -53,8 +112,11 @@
                     <configuration>
                         <forkCount>0</forkCount>
                         <suiteXmlFiles>
+                        <!-- perintah untuk jalankan suites -->
                             <!-- <suiteXmlFile>src/test/resources/testng_simple_suite.xml</suiteXmlFile> -->
-                            <suiteXmlFile>src/test/resources/testng_parallel_suite.xml</suiteXmlFile>
+                            <!-- <suiteXmlFile>src/test/resources/testng_parallel_suite.xml</suiteXmlFile> -->
+                            <suiteXmlFile>src/test/resources/cucumber_suite.xml</suiteXmlFile>
+                            <!-- <suiteXmlFile>${suiteXml}</suiteXmlFile> -->
                         </suiteXmlFiles>
                     </configuration>
                 </plugin>
