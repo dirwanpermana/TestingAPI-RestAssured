@@ -62,45 +62,42 @@
             <scope>test</scope>
         </dependency>
         <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-junit</artifactId>
+            <version>7.21.1</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
             <groupId>net.masterthought</groupId>
             <artifactId>cucumber-reporting</artifactId>
             <version>5.7.0</version>
         </dependency>
-        <!-- <dependency>
-        <groupId>io.cucumber</groupId>
-        <artifactId>cucumber-junit-platform-engine</artifactId>
-        <version>7.22.2</version>
-        </dependency> -->
-
-    <!-- JUnit 5
-    <dependency>
-        <groupId>org.junit.platform</groupId>
-        <artifactId>junit-platform-suite-api</artifactId>
-        <version>1.10.0</version>
-    </dependency> -->
-
-   <dependency>
-    <groupId>org.testng</groupId>
-    <artifactId>testng</artifactId>
-    <version>7.8.0</version>
-    <scope>test</scope>
-    </dependency>
-
-    <dependency>
-    <groupId>org.slf4j</groupId>
-    <artifactId>slf4j-simple</artifactId>
-    <version>2.0.9</version>
-    <scope>test</scope>
-    </dependency>
-
-    <!-- JSON Path matcher -->
-    <dependency>
-        <groupId>io.rest-assured</groupId>
-        <artifactId>json-path</artifactId>
-        <version>5.4.0</version>
-    </dependency>
-
+        <!-- https://mvnrepository.com/artifact/io.github.cdimascio/dotenv-java -->
+        <dependency>
+            <groupId>io.github.cdimascio</groupId>
+            <artifactId>dotenv-java</artifactId>
+            <version>3.2.0</version>
+        </dependency>
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-picocontainer</artifactId>
+            <version>7.22.2</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>2.0.9</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- JSON Path matcher -->
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>json-path</artifactId>
+            <version>5.4.0</version>
+        </dependency>
     </dependencies>
+    
     <build>
         <!-- To define the plugin version in your parent POM -->
         <pluginManagement>

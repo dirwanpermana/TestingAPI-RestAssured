@@ -1,30 +1,22 @@
 package cucumber.runners;
 
-import org.testng.annotations.AfterSuite;
-import cucumber.helper.GenerateReport;
-import io.cucumber.testng.AbstractTestNGCucumberTests;
-import io.cucumber.testng.CucumberOptions;
+import org.junit.runner.RunWith;
 
+// import io.cucumber.java.BeforeAll;
+import io.cucumber.junit.Cucumber;
+import io.cucumber.junit.CucumberOptions;
+
+@RunWith(Cucumber.class)
 @CucumberOptions(
     features = "src/test/resources/features",
     glue = "cucumber.definitions",
-    plugin = {
-        "pretty",
-        "json:target/cucumber.json",
-        "html:target/cucumber-html-report"
-    },
-    monochrome = true
+    plugin = {"pretty",                                   // Pretty console output
+                "html:target/cucumber-report.html",          // HTML report
+                "json:target/cucumber-report.json",          // JSON report
+                "junit:target/cucumber-report.xml"           // JUnit XML report
+            },
+    monochrome = true   //tambahan
 )
-public class TestRunner extends AbstractTestNGCucumberTests {
 
-    static {
-        System.out.println(">>> TestRunner loaded");
-    }
-
-    @AfterSuite
-    public void afterSuite() {
-        System.out.println(">>> Generating report...");
-        GenerateReport.generateReport();
-        System.out.println(">>> Report generated!");
-    }
+public class TestRunner {
 }

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="6.046" tests="3" skipped="0" failures="0" errors="0" timestamp="2025-05-29T11:01:15.109478100Z">
+<testcase classname="Login API" name="Login with valid user" time="3.176">
+<system-out><![CDATA[
+When Send user to login with body:..........................................passed
+Then The response status must be 200........................................passed
+And Save the token from the response to local storage.......................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login API" name="Get all objects" time="1.738">
+<system-out><![CDATA[
+Given Make sure token in local storage not empty............................passed
+When Send a request to get all object.......................................passed
+Then The response status must be 200........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login API" name="Create new object" time="0.934">
+<system-out><![CDATA[
+Given Make sure token in local storage not empty............................passed
+When Send create object with body:..........................................passed
+Then The response status must be 200........................................passed
+And Save the object ID from the response....................................passed
+And name in the response must be "Laptop si unyil"..........................passed
+]]></system-out>
+</testcase>
+</testsuite>

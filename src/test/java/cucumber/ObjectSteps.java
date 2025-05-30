@@ -63,4 +63,14 @@ public class ObjectSteps {
             equalToIgnoringCase(expectedValue)
         );
     }
+
+    @Then("Full name in the response must be {string}")
+    public void Full_name_in_the_response_must_be(String s) {
+        // Write code here that turns the phrase above into concrete actions
+    }
+
+    @Then("name in the response must be {string}")
+    public void name_in_the_response_must_be(String s) {
+        // Write code here that turns the phrase above into concrete actions
+    }
 }

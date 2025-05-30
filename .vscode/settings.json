@@ -1,3 +1,5 @@
 {
-  "java.configuration.updateBuildConfiguration": "automatic"
+  "java.configuration.updateBuildConfiguration": "automatic",
+  "github.copilot.chat.search.keywordSuggestions": true,
+  "dotenv.enableAutocloaking": false
 }
